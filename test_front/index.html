@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllSpares – Автозапчасти</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="rgb(43, 43, 47)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    <header class="header-fullsize">
+        <div class="header-container">
+            <a class="header-logo" href="/">
+                <img class="header-logo-image" src="/images/site-icon.png" alt="AllSpares">
+            </a>
+            <div class="search-panel">
+                <button class="catalog-button" onclick="transformCatalogButton();showHideDropdownMenu()">
+                    <div class="catalog-button-container">
+                        <div class="bar1 catalog-button-bar"></div>
+                        <div class="bar2 catalog-button-bar"></div>
+                        <div class="bar3 catalog-button-bar"></div>
+                    </div>
+                </button>
+                <ul class="catalog-dropdown-menu">
+                    <li><a class="catalog-dropdown-item catalog-dropdown-item-large" href="/catalog/catalog.html">Каталог</a></li>
+                    <li><a class="catalog-dropdown-item" href="/catalog/autoparts.html?category=accumulators">Аккумуляторы</a></li>
+                    <li><a class="catalog-dropdown-item" href="/catalog/autoparts.html?category=disks">Диски</a></li>
+                    <li><a class="catalog-dropdown-item" href="/catalog/autoparts.html?category=tires">Шины</a></li>
+                    <li><a class="catalog-dropdown-item" href="/catalog/autoparts.html?category=filters">Фильтры</a></li>
+                </ul>
+                <form action="/catalog/autoparts.html" class="search-from" method="get">
+                    <input type="search" class="search-form-input" id="search-form-input-1" name="searchQuery" placeholder="Поиск по номеру детали" spellcheck="false" autocomplete="off">
+                    <button type="submit" class="search-form-submit">
+                        <p>Найти</p>
+                    </button>
+                </form>
+            </div>
+            <a class="cart-link" href="/cart/cart.html">
+                <img class="cart-link-icon" src="/images/cart.png">
+                <p>Корзина</p>
+                <div class="cart-link-counter">1</div>
+            </a>
+        </div>
+    </header>
+    <header class="header-tablet">
+        <div class="header-container">
+            <a class="header-logo" href="/">
+                <img class="header-logo-image" src="/images/site-icon.png" alt="AllSpares">
+            </a>
+            <div class="search-panel">
+                <form action="/catalog/autoparts.html" class="search-from" method="get">
+                    <input type="search" class="search-form-input" id="search-form-input-2" name="searchQuery" placeholder="Поиск по номеру детали" spellcheck="false" autocomplete="off">
+                    <button type="submit" class="search-form-submit">
+                        <p>Найти</p>
+                    </button>
+                </form>
+            </div>
+            <button class="catalog-button catalog-button-mobile"
+                onclick="transformCatalogButton();showHideDropdownMenu()">
+                <div class="catalog-button-container">
+                    <div class="bar1 catalog-button-bar catalog-button-bar-mobile"></div>
+                    <div class="bar2 catalog-button-bar catalog-button-bar-mobile"></div>
+                    <div class="bar3 catalog-button-bar catalog-button-bar-mobile"></div>
+                </div>
+            </button>
+            <ul class="catalog-dropdown-menu catalog-dropdown-menu-tablet">
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-large catalog-dropdown-item-mobile"
+                        href="/catalog/catalog.html">Каталог</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=accumulators">Аккумуляторы</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=disks">Диски</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=tires">Шины</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=filters">Фильтры</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/cart/cart.html">
+                        <img class="cart-link-icon" src="/images/cart.png">
+                        <p>Корзина</p>
+                        <div class="cart-link-counter cart-link-counter-tablet">1</div>
+                    </a></li>
+            </ul>
+        </div>
+    </header>
+    <header class="header-mobile">
+        <div class="header-container">
+            <a class="header-logo" href="/">
+                <img class="header-logo-image" src="/images/site-icon.png" alt="AllSpares">
+            </a>
+            <button class="catalog-button catalog-button-mobile"
+                onclick="transformCatalogButton();showHideDropdownMenu()">
+                <div class="catalog-button-container">
+                    <div class="bar1 catalog-button-bar catalog-button-bar-mobile"></div>
+                    <div class="bar2 catalog-button-bar catalog-button-bar-mobile"></div>
+                    <div class="bar3 catalog-button-bar catalog-button-bar-mobile"></div>
+                </div>
+            </button>
+            <ul class="catalog-dropdown-menu catalog-dropdown-menu-mobile">
+                <li class="catalog-dropdown-menu-mobile-li">
+                    <div class="search-panel">
+                        <form action="/catalog/autoparts.html" class="search-from" method="get">
+                            <input type="search" class="search-form-input" id="search-form-input-3" name="searchQuery" placeholder="Поиск по номеру детали" spellcheck="false" autocomplete="off">
+                            <button type="submit" class="search-form-submit">
+                                <p>Найти</p>
+                            </button>
+                        </form>
+                    </div>
+                </li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-large catalog-dropdown-item-mobile" href="/catalog/catalog.html">Каталог</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=accumulators">Аккумуляторы</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=disks">Диски</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=tires">Шины</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/catalog/autoparts.html?category=filters">Фильтры</a></li>
+                <li><a class="catalog-dropdown-item catalog-dropdown-item-mobile" href="/cart/cart.html">
+                        <img class="cart-link-icon" src="/images/cart.png">
+                        <p>Корзина</p>
+                        <div class="cart-link-counter cart-link-counter-tablet">1</div>
+                </a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-container">
+            <section class="winter-period-section page-section">
+                <h3 class="header-large-label">Актуально в зимний период</h3>
+                <div class="winter-period-content">
+                    <div class="winter-period-info">
+                        <h3 class="header-large-label item-header-white">Подготовьте свою машину к зиме</h3>
+                        <a href="/catalog/autoparts.html?category=winter" class="winter-period-more-link">Перейти в каталог</a>
+                    </div>
+                    <div class="winter-period-products">
+                        <a href="/catalog/autoparts.html?category=windshieldWashers" class="winter-period-products-item">
+                            <img class="winter-period-product-images" src="/photos/windshield_washer.png">
+                            <p class="product-winter-name">Стеклоомыватели</p>
+                        </a>
+                        <a href="/catalog/autoparts.html?category=tires" class="winter-period-products-item">
+                            <img class="winter-period-product-images" src="/photos/tire_winter.png">
+                            <p class="product-winter-name">Шины</p>
+                        </a>
+                        <a href="/catalog/autoparts.html?category=accumulators" class="winter-period-products-item">
+                            <img class="winter-period-product-images" src="/photos/varta_battery.png">
+                            <p class="product-winter-name">Аккумуляторы</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="auto-brands page-item">
+                <h3 class="header-label">Каталог автозапчастей</h3>
+                <div class="auto-brands-table">
+                    <button class="auto-brands-item" id="Acura" onclick="openCatalog(this.id);">
+                        Acura
+                    </button>
+                    <button class="auto-brands-item" id="Alfa Romeo" onclick="openCatalog(this.id);">
+                        Alfa Romeo
+                    </button>
+                    <button class="auto-brands-item" id="Audi" onclick="openCatalog(this.id);">
+                        Audi
+                    </button>
+                    <button class="auto-brands-item" id="Bentley" onclick="openCatalog(this.id);">
+                        Bentley
+                    </button>
+                    <button class="auto-brands-item" id="BMW" onclick="openCatalog(this.id);">
+                        BMW
+                    </button>
+                    <button class="auto-brands-item" id="Buick" onclick="openCatalog(this.id);">
+                        Buick
+                    </button>
+                    <button class="auto-brands-item" id="Cadillac" onclick="openCatalog(this.id);">
+                        Cadillac
+                    </button>
+                    <button class="auto-brands-item" id="Chery" onclick="openCatalog(this.id);">
+                        Chery
+                    </button>
+                    <button class="auto-brands-item" id="Chevrolet" onclick="openCatalog(this.id);">
+                        Chevrolet
+                    </button>
+                    <button class="auto-brands-item" id="Chrysler" onclick="openCatalog(this.id);">
+                        Chrysler
+                    </button>
+                    <button class="auto-brands-item" id="Citroën" onclick="openCatalog(this.id);">
+                        Citroën
+                    </button>
+                    <button class="auto-brands-item" id="Dacia" onclick="openCatalog(this.id);">
+                        Dacia
+                    </button>
+                    <button class="auto-brands-item" id="Daewoo" onclick="openCatalog(this.id);">
+                        Daewoo
+                    </button>
+                    <button class="auto-brands-item" id="Daf" onclick="openCatalog(this.id);">
+                        Daf
+                    </button>
+                    <button class="auto-brands-item" id="Daimler" onclick="openCatalog(this.id);">
+                        Daimler
+                    </button>
+                    <button class="auto-brands-item" id="Datsun" onclick="openCatalog(this.id);">
+                        Datsun
+                    </button>
+                    <button class="auto-brands-item" id="Dodge" onclick="openCatalog(this.id);">
+                        Dodge
+                    </button>
+                    <button class="auto-brands-item" id="Fiat" onclick="openCatalog(this.id);">
+                        Fiat
+                    </button>
+                    <button class="auto-brands-item" id="Ford" onclick="openCatalog(this.id);">
+                        Ford
+                    </button>
+                    <button class="auto-brands-item" id="Gaz" onclick="openCatalog(this.id);">
+                        Gaz
+                    </button>
+                    <button class="auto-brands-item" id="Geely" onclick="openCatalog(this.id);">
+                        Geely
+                    </button>
+                    <button class="auto-brands-item" id="Haval" onclick="openCatalog(this.id);">
+                        Haval
+                    </button>
+                    <button class="auto-brands-item" id="Honda" onclick="openCatalog(this.id);">
+                        Honda
+                    </button>
+                    <button class="auto-brands-item" id="Hyundai" onclick="openCatalog(this.id);">
+                        Hyundai
+                    </button>
+                    <button class="auto-brands-item" id="Infiniti" onclick="openCatalog(this.id);">
+                        Infiniti
+                    </button>
+                    <button class="auto-brands-item" id="Jac" onclick="openCatalog(this.id);">
+                        Jac
+                    </button>
+                    <button class="auto-brands-item" id="Jaguar" onclick="openCatalog(this.id);">
+                        Jaguar
+                    </button>
+                    <button class="auto-brands-item" id="Jeep" onclick="openCatalog(this.id);">
+                        Jeep
+                    </button>
+                    <button class="auto-brands-item" id="Kia" onclick="openCatalog(this.id);">
+                        Kia
+                    </button>
+                    <button class="auto-brands-item" id="Lada" onclick="openCatalog(this.id);">
+                        Lada
+                    </button>
+                    <button class="auto-brands-item" id="Lancia" onclick="openCatalog(this.id);">
+                        Lancia
+                    </button>
+                    <button class="auto-brands-item" id="Land Rover" onclick="openCatalog(this.id);">
+                        Land Rover
+                    </button>
+                    <button class="auto-brands-item" id="Lexus" onclick="openCatalog(this.id);">
+                        Lexus
+                    </button>
+                    <button class="auto-brands-item" id="Lifan" onclick="openCatalog(this.id);">
+                        Lifan
+                    </button>
+                    <button class="auto-brands-item" id="Mazda" onclick="openCatalog(this.id);">
+                        Mazda
+                    </button>
+                    <button class="auto-brands-item" id="Mercedes-Benz" onclick="openCatalog(this.id);">
+                        Mercedes-Benz
+                    </button>
+                    <button class="auto-brands-item" id="Mini" onclick="openCatalog(this.id);">
+                        Mini
+                    </button>
+                    <button class="auto-brands-item" id="Mitsubishi" onclick="openCatalog(this.id);">
+                        Mitsubishi
+                    </button>
+                    <button class="auto-brands-item" id="Nissan" onclick="openCatalog(this.id);">
+                        Nissan
+                    </button>
+                    <button class="auto-brands-item" id="Opel" onclick="openCatalog(this.id);">
+                        Opel
+                    </button>
+                    <button class="auto-brands-item" id="Peugeot" onclick="openCatalog(this.id);">
+                        Peugeot
+                    </button>
+                    <button class="auto-brands-item" id="Porsche" onclick="openCatalog(this.id);">
+                        Porsche
+                    </button>
+                    <button class="auto-brands-item" id="Renault" onclick="openCatalog(this.id);">
+                        Renault
+                    </button>
+                    <button class="auto-brands-item" id="Saab" onclick="openCatalog(this.id);">
+                        Saab
+                    </button>
+                    <button class="auto-brands-item" id="Seat" onclick="openCatalog(this.id);">
+                        Seat
+                    </button>
+                    <button class="auto-brands-item" id="Skoda" onclick="openCatalog(this.id);">
+                        Skoda
+                    </button>
+                    <button class="auto-brands-item" id="Smart" onclick="openCatalog(this.id);">
+                        Smart
+                    </button>
+                    <button class="auto-brands-item" id="SsangYong" onclick="openCatalog(this.id);">
+                        SsangYong
+                    </button>
+                    <button class="auto-brands-item" id="Subaru" onclick="openCatalog(this.id);">
+                        Subaru
+                    </button>
+                    <button class="auto-brands-item" id="Suzuki" onclick="openCatalog(this.id);">
+                        Suzuki
+                    </button>
+                    <button class="auto-brands-item" id="Tesla" onclick="openCatalog(this.id);">
+                        Tesla
+                    </button>
+                    <button class="auto-brands-item" id="Toyota" onclick="openCatalog(this.id);">
+                        Toyota
+                    </button>
+                    <button class="auto-brands-item" id="Uaz" onclick="openCatalog(this.id);">
+                        Uaz
+                    </button>
+                    <button class="auto-brands-item" id="Volvo" onclick="openCatalog(this.id);">
+                        Volvo
+                    </button>
+                    <button class="auto-brands-item" id="Volkswagen" onclick="openCatalog(this.id);">
+                        Volkswagen
+                    </button>
+                </div>
+            </section>
+            <section class="popular-products page-section">
+                <h3 class="header-large-label">Популярные товары</h3>
+                <div class="popular-products-table">
+                    <a class="product-card" href="/details/detail.html?detailCode=06J115403Q">
+                        <img class="product-card-image" src="photos/s-l1600.jpg" alt="Маслянный фильтр">
+                        <p class="product-card-coast">1 450 ₽</p>
+                        <p class="product-card-name">Маслянный фильтр</p>
+                        <p class="product-card-compatibility">VAG – 06J 115 403 Q</p>
+                    </a>
+                    <a class="product-card" href="/details/detail.html?detailCode=0242140523">
+                        <img class="product-card-image" src="photos/spark_plug.jpg" alt="">
+                        <p class="product-card-coast">1 100 ₽</p>
+                        <p class="product-card-name">Свеча зажигания</p>
+                        <p class="product-card-compatibility">Bosch – 0 242 140 523</p>
+                    </a>
+                    <a class="product-card" href="/details/detail.html?detailCode=2483710">
+                        <img class="product-card-image" src="photos/oil.jpg" alt="">
+                        <p class="product-card-coast">1 290 ₽</p>
+                        <p class="product-card-name">Масло моторное 5W-40</p>
+                        <p class="product-card-compatibility">G-Energy</p>
+                    </a>
+                    <a class="product-card" href="/details/detail.html?detailCode=NO138493">
+                        <img class="product-card-image" src="photos/drain_plug_gasket.jpg" alt="">
+                        <p class="product-card-coast">59 ₽</p>
+                        <p class="product-card-name">Прокладка сливной пробки</p>
+                        <p class="product-card-compatibility">VAG – N0138493</p>
+                    </a>
+                    <a class="product-card" href="/details/detail.html?detailCode=4K0698151">
+                        <img class="product-card-image" src="photos/front_brake_pads.jpg" alt="">
+                        <p class="product-card-coast">17 500 ₽</p>
+                        <p class="product-card-name">Тормозные колодки передние</p>
+                        <p class="product-card-compatibility">VAG – 4K0698151</p>
+                    </a>
+                    <a class="product-card" href="/details/detail.html?detailCode=B000750M1">
+                        <img class="product-card-image" src="photos/brake_fluid.jpg" alt="">
+                        <p class="product-card-coast">650 ₽</p>
+                        <p class="product-card-name">Тормозная жидкость DOT4</p>
+                        <p class="product-card-compatibility">VAG – B 000 750 M1</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-panel">
+                <ul class="footer-panel-item" id="0">
+                    <li class="footer-panel-h">Товары</li>
+                    <li class="footer-panel-label">
+                        <a href="/catalog/autoparts.html?category=accumulators" class="footer-panel-label">Аккумуляторы</a>
+                    </li>
+                    <li class="footer-panel-label">
+                        <a href="/catalog/autoparts.html?category=disks" class="footer-panel-label">Диски</a>
+                    </li>
+                    <li class="footer-panel-label">
+                        <a href="/catalog/autoparts.html?category=tires" class="footer-panel-label">Шины</a>
+                    </li>
+                    <li class="footer-panel-label">
+                        <a href="/catalog/autoparts.html?category=filters" class="footer-panel-label">Фильтры</a>
+                    </li>
+                </ul>
+                <ul class="footer-panel-item" id="1">
+                    <li class="footer-panel-h">Контакты</li>
+                    <li class="footer-panel-label">
+                        <span>Остаповский пр, д. 28</span>
+                    </li>
+                    <li class="footer-panel-label">
+                        <a href="tel:89005002020" class="footer-panel-label">+7 (900) 500-20-20</a>
+                    </li>
+                    <li class="footer-panel-label">
+                        <a href="mailto:allspares@gmail.com" class="footer-panel-label">allspares@gmail.com</a>
+                    </li>
+                    <li class="footer-panel-label">
+                        <span>Ежедневно 9:00–21:00</span>
+                    </li>
+                </ul>
+                <div class="footer-panel-item socials-panel" id="2">
+                    <a class="socials-link" href="https://vk.com/">
+                        <div class="socials-image">
+                            <img src="/images/vk.svg">
+                        </div>
+                    </a>
+                    <a class="socials-link" href="https://web.telegram.org/k/">
+                        <div class="socials-image">
+                            <img src="/images/telegram.svg">
+                        </div>
+                    </a>
+                    <a class="socials-link" href="https://www.youtube.com/">
+                        <div class="socials-image">
+                            <img src="/images/youtube.svg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="sub-footer-panel">
+                <p>&copy; 2023 Алексей Рубан, ИКБО-30-22. Все права защищены.</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/main-page-onload.js"></script>
+    <script src="/scripts/catalog-button-transform.js"></script>
+    <script src="/scripts/show-hide-dropdown-menu.js"></script>
+    <script src="/scripts/hide_menu_on_click.js"></script>
+    <script src="/scripts/open-catalog.js"></script>
+    <script src="/cart/scripts/cart-content.js"></script>
+    <script src="/scripts/synchronize-search-inputs.js"></script>
+    <script src="/catalog/scripts/catalog-content.js"></script>
+</body>
+
+</html>
