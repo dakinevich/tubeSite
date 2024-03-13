@@ -1,1 +1,87 @@
-hi gay2
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин сантехники</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-card h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .product-card p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            color: #777;
+        }
+        .product-card button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Интернет-магазин сантехники</h1>
+        </div>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="path/to/product1.jpg" alt="Продукт 1">
+                <h3>Продукт 1</h3>
+                <p>Описание продукта 1</p>
+                <button>Купить</button>
+            </div>
+            <div class="product-card">
+                <img src="path/to/product2.jpg" alt="Продукт 2">
+                <h3>Продукт 2</h3>
+                <p>Описание продукта 2</p>
+                <button>Купить</button>
+            </div>
+            <!-- Добавьте больше карточек продуктов по аналогии -->
+        </div>
+    </div>
+</body>
+</html>
