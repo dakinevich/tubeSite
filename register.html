@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles/logoback.css">
+</head>
+<body>
+    <div class="logo">
+        <a href="img/logo05.jpg" class="back-button">
+            <img src="img/logo05.jpg" alt="Логотип" class="logo">
+        </a>
+    </div>
+    <div class="go back">
+        <button onclick="history.back()" class="back-button">Назад</button>
+    </div>
+    <div>
+        <h1>Регистрация</h1>
+    </div>
+    <div class="register">
+        <form id="registerForm">
+            <label for="emailOrPhone">Email или номер телефона:</label>
+            <input type="text" id="emailOrPhone" name="emailOrPhone" required>
+            <label for="name">Имя пользователя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</body>
+</html>
