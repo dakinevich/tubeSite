@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/logoback.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/avtorizatiion-menu.css">
 </head>
 <body>
     <div class="container">
@@ -19,9 +20,11 @@
             <h1>Интернет-магазин сантехники</h1>
         </div>
         <div class="avtorization">
-            <h2>Добро пожаловать!</h2>
-            <button onclick="location.href='auth.html'">Перейти к авторизации</button>
-            <button onclick="location.href='cart.html'">Перейти в корзину</button>
+            <h2 class="avtorization-header">Добро пожаловать!</h2>
+            <div class="actions">
+                <button class="go" onclick="location.href='auth.html'">Перейти к авторизации</button>
+                <button class="go" onclick="location.href='cart.html'">Перейти в корзину</button>
+            </div>
         </div>
     </div>
 </body>
