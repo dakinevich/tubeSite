@@ -1,0 +1,38 @@
+.logo {
+    height: 156px;
+    width: auto;
+}
+
+.header__logo {
+    position: relative;
+    left: 150px;
+    top: 82px;
+}
+
+.nav__link_pic {
+    height: 60px;
+    width: auto;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.man {
+    position: absolute;
+    top: 82px;
+    right: 376px;
+}
+
+.korzina {
+    position: absolute;
+    top: 82px;
+    right: 202px;
+}
+
+.header__go-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+}

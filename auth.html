@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="logotipe">
-        <a href="index.html" class="back-button">
-            <img src="img/logo05.jpg" alt="Логотип" class="logo">
-        </a>
+    <div class="header">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo_button">
+                <img src="img/logo_img.png" alt="Логотип" class="logo">
+            </a>
+        </div>
+        <div class="header__go-back">
+            <button onclick="history.back()" class="go-back__button">Назад</button>
+        </div>
     </div>
-    <div class="go back">
-        <button onclick="history.back()" class="back-button">Назад</button>
-    </div>
-    <div>
-        <h1>Авторизация</h1>
-    </div>
-    <div class="choose">
-        <button onclick="location.href='register.html'">Регистрация</button>
-        <button onclick="location.href='login.html'">Вход</button>
+
+    <div class="container">
+        <div class="container__title">
+            <h1>Авторизация</h1>
+        </div>
+        <div class="container__list">
+            <button class="list__item" onclick="location.href='register.html'">Регистрация</button>
+            <button class="list__item" onclick="location.href='login.html'">Вход</button>
+        </div>
     </div>
 </body>
 </html>

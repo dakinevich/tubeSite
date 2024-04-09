@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="logotipe">
-        <a href="index.html" class="back-button">
-            <img src="img/logo05.jpg" alt="Логотип" class="logo">
-        </a>
+    <div class="header">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo_button">
+                <img src="img/logo_img.png" alt="Логотип" class="logo">
+            </a>
+        </div>
+        <div class="header__go-back">
+            <button onclick="history.back()" class="go-back__button">Назад</button>
+        </div>
     </div>
-    <div class="go back">
-        <button onclick="history.back()" class="back-button">Назад</button>
-    </div>
-    <div>
-        <h1>Вход</h1>
-    </div>
-    <div class="login">
-        <form id="loginForm">
-            <label for="login">Логин (Email или номер телефона):</label>
-            <input type="text" id="login" name="login" required>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Войти</button>
-        </form>
+    <div class="container">
+        <div class="container__title">
+            <h1>Вход</h1>
+        </div>
+        <div class="container__login">
+            <form id="login__form">
+                <label for="login">Логин (Email или номер телефона):</label>
+                <input type="text" id="login" name="login" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

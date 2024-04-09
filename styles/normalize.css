@@ -347,3 +347,8 @@
   [hidden] {
     display: none;
   }
+
+ .nav__list {
+    list-style-type: none;
+}
+

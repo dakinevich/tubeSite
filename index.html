@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santexopt</title>
-    <link rel="stylesheet" href="styles/logoback.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/avtorizatiion-menu.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logotipe">
-            <a href="index.html" class="back-button">
-                <img src="img/logo05.jpg" alt="Логотип" class="logo">
+    <div class="header">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo_button">
+                <img src="img/logo_img.png" alt="Логотип" class="logo">
             </a>
         </div>
-        <div class="header">
-            <h1>Интернет-магазин сантехники</h1>
-        </div>
-        <div class="avtorization">
-            <h2 class="avtorization-header">Добро пожаловать!</h2>
-            <div class="actions">
-                <button class="go" onclick="location.href='auth.html'">Перейти к авторизации</button>
-                <button class="go" onclick="location.href='cart.html'">Перейти в корзину</button>
-            </div>
-        </div>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="auth.html" class="nav__link"> <img src="img/image _man_log.png" class="nav__link_pic man" alt="Профиль"></a></li>
+                <li class="nav__item"><a href="cart.html" class="nav__link"> <img src="img/image_korzina.png" class="nav__link_pic korzina" alt="Корзина"></a></li>
+            </ul>
+        </nav>
     </div>
 </body>
 </html>

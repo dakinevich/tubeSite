@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="logotipe">
-        <a href="index.html" class="back-button">
-            <img src="img/logo05.jpg" alt="Логотип" class="logo">
-        </a>
+    <div class="header">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo_button">
+                <img src="img/logo_img.png" alt="Логотип" class="logo">
+            </a>
+        </div>
+        <div class="header__go-back">
+            <button onclick="history.back()" class="go-back__button">Назад</button>
+        </div>
     </div>
-    <div class="go back">
-        <button onclick="history.back()" class="back-button">Назад</button>
-    </div>
-    <div>
-        <h1>Регистрация</h1>
-    </div>
-    <div class="register">
-        <form id="registerForm">
-            <label for="emailOrPhone">Email или номер телефона:</label>
-            <input type="text" id="emailOrPhone" name="emailOrPhone" required>
-            <label for="name">Имя пользователя:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Зарегистрироваться</button>
-        </form>
+    <div class="container">
+        <div>
+            <h1>Регистрация</h1>
+        </div>
+        <div class="container__register">
+            <form id="register__form">
+                <label for="emailOrPhone">Email или номер телефона:</label>
+                <input type="text" id="emailOrPhone" name="emailOrPhone" required>
+                <label for="name">Имя пользователя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
